@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    S3_BUCKET: "todo-angular-demo7"
+    S3_BUCKET: "todo-angular-demo"
     APP_NAME: "Fullstack-Todo"
     BUILD_ENV: "prod"
 
