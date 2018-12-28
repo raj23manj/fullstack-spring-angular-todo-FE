@@ -11,6 +11,7 @@ export class FormUploadComponent implements OnInit {
   selectedFiles: FileList;
   currentFileUpload: File;
   progress: { percentage: number } = { percentage: 0 };
+  downloadFileName: String = "";
 
   constructor(private uploadService: UploadFileService) {}
 
@@ -37,5 +38,14 @@ export class FormUploadComponent implements OnInit {
       });
 
     this.selectedFiles = undefined;
+  }
+
+  download() {
+    this.downloadFileName = "demo1";
+    this.uploadService
+      .downloadFileUrl(this.downloadFileName)
+      .subscribe(response => {
+        console.log(response);
+      });
   }
 }
