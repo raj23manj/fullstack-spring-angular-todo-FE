@@ -43,4 +43,8 @@ export class UploadFileService {
       responseType: "text"
     });
   }
+
+  downloadNotification(): Observable<any> {
+    return this.http.get(`${API_URL}/download-notification-url`);
+  }
 }

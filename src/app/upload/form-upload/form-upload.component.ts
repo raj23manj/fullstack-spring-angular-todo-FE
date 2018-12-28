@@ -41,11 +41,15 @@ export class FormUploadComponent implements OnInit {
   }
 
   download() {
-    this.downloadFileName = "demo1";
-    this.uploadService
-      .downloadFileUrl(this.downloadFileName)
-      .subscribe(response => {
-        console.log(response);
-      });
+    // this.downloadFileName = "demo1";
+    // this.uploadService
+    //   .downloadFileUrl(this.downloadFileName)
+    //   .subscribe(response => {
+    //     console.log(response);
+    //   });
+
+    this.uploadService.downloadNotification().subscribe(response => {
+      console.log(response);
+    });
   }
 }
